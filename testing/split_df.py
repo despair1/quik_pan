@@ -9,4 +9,5 @@ def split_df(df: pd.DataFrame):
     sample_arr = []
     for i in range(0, len(df), sample_size):
         sample_arr.append(df[i:i+sample_size])
-    print(sample_arr)
+    # print(sample_arr)
+    return sample_arr

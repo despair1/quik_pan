@@ -21,7 +21,9 @@ if __name__ == '__main__':
     # get_mins(df, "<LOW>", 1,15,300)
     # loc_by_value(df)
     print(df.dtypes)
-    df = new_time(df)
-    split_df(df)
+    # df = new_time(df)
+    df = split_df(df)
+    for i in df:
+        print(i.describe())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
