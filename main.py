@@ -5,7 +5,7 @@ import pandas as pd
 
 from aggregate_periods import get_mins
 from testing.loc_by_value import loc_by_value
-from testing.make_periods import split
+from testing.new_time import new_time
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -20,6 +20,6 @@ if __name__ == '__main__':
     # get_mins(df, "<LOW>", 1,15,300)
     # loc_by_value(df)
     print(df.dtypes)
-    split(df)
+    new_time(df)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
