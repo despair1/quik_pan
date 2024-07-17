@@ -4,6 +4,10 @@ import init
 
 
 def short_data(df :pd.DataFrame):
+    pd.options.display.float_format = '{:.3f}'.format
     ticker = df[init.ticker_column].iat[0]
-    print(ticker)
-    return ticker
+    start_date = df[init.date_column].iat[0]
+    mean_open = df[init.open_column].mean()
+    std_open = df[init.open_column].std()
+    # print(ticker, start_date, mean_open, std_open)
+    return ticker, start_date, mean_open, std_open
