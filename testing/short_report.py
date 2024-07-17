@@ -4,5 +4,6 @@ import init
 
 
 def short_data(df :pd.DataFrame):
-    ticker = df[init.ticker_column].iloc(0)
+    ticker = df[init.ticker_column].iat[0]
     print(ticker)
+    return ticker
