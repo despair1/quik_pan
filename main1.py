@@ -7,7 +7,7 @@ from testing.loc_by_value import loc_by_value
 from testing.new_time import new_time
 from testing.split_df import split_df
 from testing.describe import describe
-df = pd.read_csv('../ОФЗ 26243 [Price]''.txt')
+df = pd.read_csv('../ОФЗ 26226 [Price]''.txt')
 
 #print(df)
 #print(df.loc[[0,3]])
