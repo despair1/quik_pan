@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DataFrames Display</title>
+    <style>
+        .table-container {
+            display: flex;
+        }
+        .table-container table {
+            margin-right: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>DataFrames Display</h1>
+    <div class="table-container">
+        <table>
+            <caption>Data Frame 1</caption>
+            {{ df1.to_html(classes="dataframe") | safe }}
+        </table>
+        <table>
+            <caption>Data Frame 2</caption>
+            {{ df2.to_html(classes="dataframe") | safe }}
+        </table>
+    </div>
+</body>
+</html>

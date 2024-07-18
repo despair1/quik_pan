@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 import pandas as pd
 import sys
 
 sys.path.insert(1, "testing")
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 data = {'Name': ['Alice', 'Bob', 'Charlie'],
         'Age': [25, 30, 35]}
 df = pd.DataFrame(data)
@@ -25,8 +25,11 @@ df = split_df(df)
 df = short_report(df)
 df = delta_days(df)
 df = mean_diff(df)
-
+l = """
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+"""
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>" + df.to_html()
+    # return l + "<p>Hello, World!</p>" + df.to_html(border=3)
+    return render_template('2df.html', df1=df, df2=df)
