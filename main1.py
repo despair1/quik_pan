@@ -2,11 +2,8 @@ import pandas as pd
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from aggregate_periods import get_mins
-from testing.loc_by_value import loc_by_value
-from testing.new_time import new_time
-from testing.split_df import split_df
-from testing.describe import describe
+from split_df import split_df
+from describe import describe
 df = pd.read_csv('../ОФЗ 26226 [Price]''.txt')
 
 #print(df)

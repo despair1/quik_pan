@@ -4,7 +4,7 @@ from short_report import short_report
 from split_df import split_df
 from delta_days import delta_days
 from mean_diff import mean_diff
-df = pd.read_csv('../ОФЗ 26226 [Price]''.txt')
+df = pd.read_csv('../ОФЗ 26243 [Price]''.txt')
 
 if __name__ == '__main__':
     print(df.dtypes)
