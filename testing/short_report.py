@@ -1,16 +1,21 @@
+import init
+from short_data import short_data
 import pandas as pd
 
-import init
-
-
-def short_data(df :pd.DataFrame):
+def short_report(df) -> pd.DataFrame:
+    data = {init.ticker_column: [],
+            init.date_column: [],
+            "mean": [],
+            "std_m": [],
+            "q25%": []}
+    for i in df:
+        t,d,m,s, q = short_data(i)
+        data[init.ticker_column].append(t)
+        data[init.date_column].append(d)
+        data["mean"].append(m)
+        data["std_m"].append(s)
+        data["q25%"].append(q)
+    df = pd.DataFrame(data)
     pd.options.display.float_format = '{:.3f}'.format
-    ticker = df[init.ticker_column].iat[0]
-    start_date = df[init.date_column].iat[0]
-    mean_open = df[init.open_column].mean()
-    std_open = df[init.open_column].std()
-    q25 = df[init.high_column].quantile(0.75) / \
-          df[init.low_collumn].quantile(0.25)
-    q25 = (q25-1) * 100
-    # print(ticker, start_date, mean_open, std_open)
-    return ticker, start_date, mean_open, std_open, q25
+    # print(df)
+    return df
