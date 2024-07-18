@@ -5,6 +5,7 @@ import pandas as pd
 from split_df import split_df
 from describe import describe
 df = pd.read_csv('../ОФЗ 26243 [Price]''.txt')
+from file_list import file_list
 
 #print(df)
 #print(df.loc[[0,3]])
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     df = split_df(df)
     # for i in df:
     #     print(i.describe())
-    describe(df)
+    # describe(df)
+    file_list()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
