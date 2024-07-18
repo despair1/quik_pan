@@ -16,7 +16,7 @@ from first_report import first_report
 def hello_world():
     # return l + "<p>Hello, World!</p>" + df.to_html(border=3)
     df_all, filenames, str_select = file_list()
-    print(str_select)
+    # print(str_select)
     df1 = first_report(df_all[0])
     df2 = first_report(df_all[1])
     return render_template('2df.html', df1=df1, df2=df2,
