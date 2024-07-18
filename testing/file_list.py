@@ -11,8 +11,8 @@ def file_list():
     s = ""
     for i,filename in enumerate(txt_files):
         s += f'<option value="{i}"> {filename} </option>\n'
-    print(s)
-    print(subdirectory+"\\"+txt_files[0])
+    # print(s)
+    # print(subdirectory+"\\"+txt_files[0])
     df_all = []
     for filename in txt_files:
         df_all.append(pd.read_csv(subdirectory+"\\"+filename))
