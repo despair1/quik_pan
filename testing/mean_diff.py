@@ -11,3 +11,4 @@ def mean_diff(df: pd.DataFrame):
     df[init.next_mean_collumn] = (df[init.next_mean_collumn] - 1) * 100
 
     print(df)
+    return df
