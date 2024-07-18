@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
         .table-container {
@@ -27,19 +28,11 @@
 <body>
     <div class="table-container">
                     <form method="post" action="/process_form">
-    <select name="selectedOption">
-        <option value="1">Строка 1</option>
-        <option value="2">Строка 2</option>
-        <option value="3">Строка 3</option>
-        <option value="4">Строка 4</option>
-        <option value="5">Строка 5</option>
+    <select name="selectLeft">
+        {{str_select | safe}}
     </select>
-                   <select name="selectedOption">
-        <option value="1">Строка 1</option>
-        <option value="2">Строка 2</option>
-        <option value="3">Строка 3</option>
-        <option value="4">Строка 4</option>
-        <option value="5">Строка 5</option>
+    <select name="selectRight">
+        {{str_select | safe}}
     </select>
     <button type="submit">Отправить</button>
 </form>
