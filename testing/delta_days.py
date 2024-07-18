@@ -8,4 +8,5 @@ def delta_days(df: pd.DataFrame):
     del df[init.date_column]
     df[init.delta_days] = (df[init.next_day]-df[init.d1_column]).dt.days
     del df[init.next_day]
-    print(df)
+    # print(df)
+    return df

@@ -6,6 +6,7 @@ from testing.split_df import split_df
 from testing.describe import describe
 from testing.short_report import short_data
 from testing.delta_days import delta_days
+from testing.mean_diff import mean_diff
 df = pd.read_csv('../ОФЗ 26226 [Price]''.txt')
 
 if __name__ == '__main__':
@@ -17,6 +18,8 @@ if __name__ == '__main__':
     # describe(df)
     # t = short_data(df)
     df = short_report(df)
-    delta_days(df)
+    df = delta_days(df)
+    mean_diff(df)
+
 
 

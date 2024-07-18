@@ -12,7 +12,7 @@ def short_report(df) -> pd.DataFrame:
         t,d,m,s, q = short_data(i)
         data[init.ticker_column].append(t)
         data[init.date_column].append(d)
-        data["mean"].append(m)
+        data[init.mean_column].append(m)
         data["std_m"].append(s)
         data["q25%"].append(q)
     df = pd.DataFrame(data)
