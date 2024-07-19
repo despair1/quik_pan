@@ -27,6 +27,10 @@
     display: block;
     margin-top: 10px;
 }
+    #caption_div {
+    text-align: center; /* Align the caption in the center */
+    margin-bottom: 10px; /* Add space between the caption and the table */
+}
     </style>
 </head>
 <body>
@@ -49,10 +53,16 @@
 
             {{ df1.to_html(classes="dataframe") | safe }}
         </table>
+        <div>
         <table>
+                <div id="caption_div">
+        <caption id="table_name">Employee Data</caption>
+    </div>
+
 
             {{ df2.to_html(classes="dataframe") | safe }}
         </table>
+            </div>
     </div>
 </body>
 </html>
