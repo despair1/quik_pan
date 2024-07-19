@@ -23,5 +23,6 @@ def hello_world():
                            str_select=str_select)
 
 import postOfz
-
 app.add_url_rule('/process_form', methods=['GET', 'POST'], view_func=postOfz.test)
+import date
+app.add_url_rule("/date", view_func=date.date)
