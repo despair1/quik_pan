@@ -1,5 +1,5 @@
 
 
 
-def date():
-    return "Hello "
+def date(date1):
+    return f"Hello {date1}"

@@ -25,4 +25,4 @@ def hello_world():
 import postOfz
 app.add_url_rule('/process_form', methods=['GET', 'POST'], view_func=postOfz.test)
 import date
-app.add_url_rule("/date", view_func=date.date)
+app.add_url_rule("/date/<int:date1>", view_func=date.date)
