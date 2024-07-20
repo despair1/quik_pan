@@ -48,14 +48,17 @@
 </form> {#
         <a href="{{ url_for('date', date1=101) }}">Go to Another Page</a>
         #}
-        <table>
-
-
-            {{ df1.to_html(classes="dataframe") | safe }}
-        </table>
         <div>
         <table>
-                <div id="caption_div">
+                <div class="caption_div">
+        <caption id="table_name">{{ticker_left}}</caption>
+    </div>
+            {{ df1.to_html(classes="dataframe") | safe }}
+        </table>
+            </div>
+        <div>
+        <table>
+                <div class="caption_div">
         <caption id="table_name">{{ticker_right}}</caption>
     </div>
 

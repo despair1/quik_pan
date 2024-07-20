@@ -3,4 +3,6 @@ import init
 
 
 def extract_ticker(df: pd.DataFrame):
-    return df[init.ticker_column].iat[0]
+    ticker = df[init.ticker_column].iat[0]
+    del df[init.ticker_column]
+    return ticker

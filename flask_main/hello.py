@@ -22,7 +22,7 @@ def hello_world():
 
     return render_template('2df.html', df1=df1, df2=df2,
                            str_select=str_select, default_start_data=session["start_day"],
-                           ticker_right=ticker_right)
+                           ticker_right=ticker_right, ticker_left=ticker_left)
 
 import postOfz
 app.add_url_rule('/process_form', methods=['GET', 'POST'], view_func=postOfz.test)
