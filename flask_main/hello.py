@@ -17,11 +17,12 @@ def hello_world():
         session["start_day"] = 20231004
     df_all, filenames, str_select = file_list()
     # print(str_select)
-    df1 = first_report(df_all[0])
-    df2 = first_report(df_all[1])
+    df1, ticker_left = first_report(df_all[0])
+    df2, ticker_right = first_report(df_all[1])
 
     return render_template('2df.html', df1=df1, df2=df2,
-                           str_select=str_select, default_start_data=session["start_day"])
+                           str_select=str_select, default_start_data=session["start_day"],
+                           ticker_right=ticker_right)
 
 import postOfz
 app.add_url_rule('/process_form', methods=['GET', 'POST'], view_func=postOfz.test)

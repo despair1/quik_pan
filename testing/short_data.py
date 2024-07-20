@@ -12,5 +12,7 @@ def short_data(df :pd.DataFrame):
     q25 = df[init.high_column].quantile(0.75) / \
           df[init.low_collumn].quantile(0.25)
     q25 = (q25-1) * 100
+    l25 = df[init.low_collumn].quantile(0.25)
+    h75 = df[init.high_column].quantile(0.75)
     # print(ticker, start_date, mean_open, std_open)
-    return ticker, start_date, mean_open, std_open, q25
+    return ticker, start_date, mean_open, std_open, q25, l25, h75

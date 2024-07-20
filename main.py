@@ -6,6 +6,7 @@ from split_df import split_df
 from describe import describe
 df = pd.read_csv('../ОФЗ 26243 [Price]''.txt')
 from file_list import file_list
+from first_report import first_report
 
 #print(df)
 #print(df.loc[[0,3]])
@@ -21,6 +22,8 @@ if __name__ == '__main__':
     # for i in df:
     #     print(i.describe())
     # describe(df)
-    file_list()
+    df, _, _ = file_list()
+    df = first_report(df[0])
+    print(df)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

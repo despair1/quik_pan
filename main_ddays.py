@@ -16,7 +16,8 @@ if __name__ == '__main__':
     # t = short_data(df)
     df = short_report(df)
     df = delta_days(df)
-    mean_diff(df)
+    df = mean_diff(df)
+    print(df)
 
 
 
